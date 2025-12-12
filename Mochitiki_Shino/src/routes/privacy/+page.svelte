@@ -13,6 +13,7 @@
       <nav class="hamburger9-menu" aria-labelledby="hamburger9-input">
         <a href="/" class="menu-item">Home</a>
         <a href="/about" class="menu-item">About</a>
+        <a href="/earthquakeinformation" class="menu-item">地震情報について</a>
         <hr>
         <a href="/terms" class="menu-item">利用規約</a>
         <a href="/privacy" class="menu-item">プライバシーポリシー</a>
