@@ -1,28 +1,6 @@
 <script>
     import Shino from '$lib/assets/6904231-1.webp';
 </script>
-
-<header>
-    <div class="hamburger9">
-        <input type="checkbox" id="hamburger9-input" />
-        <label for="hamburger9-input">
-          <div class="hamburger9-container">
-            <span class="line line1"></span>
-            <span class="line line2"></span>
-            <span class="line line3"></span>
-            <span class="line line4"></span>
-          </div>
-        </label>
-      <nav class="hamburger9-menu" aria-labelledby="hamburger9-input">
-        <a href="/" class="menu-item">Home</a>
-        <a href="/about" class="menu-item">About</a>
-        <a href="/earthquakeinformation" class="menu-item">地震情報について</a>
-        <hr>
-        <a href="/terms" class="menu-item">利用規約</a>
-        <a href="/privacy" class="menu-item">プライバシーポリシー</a>
-      </nav>
-    </div>
-</header>
 <h1 class="text-3xl tracking-[0.2em] font-bold mb-12">Mochitiki Shino.</h1>
 <div class="relative w-screen left-1/2 -translate-x-1/2 overflow-visible">
     <svg class="w-screen max-w-none" viewBox="0 0 800 120">

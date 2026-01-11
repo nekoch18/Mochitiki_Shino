@@ -12,7 +12,7 @@
 	<meta property="og:site_name" content="餅鴇 詩乃(Mochitiki Shino)" />
 	<meta property="og:locale" content="ja_JP" />
 	<meta name="robots" content="noindex">
-	<title>Mochitiki Shino</title>
+
 	%sveltekit.head%
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-982XYWJV13"></script>
@@ -26,7 +26,33 @@
 </head>
 
 <body data-sveltekit-preload-data="hover" class="min-h-screen flex flex-col justify-center items-center text-center">
+	<header>
+		<div class="hamburger9">
+			<input type="checkbox" id="hamburger9-input" />
+			<label for="hamburger9-input">
+				<div class="hamburger9-container">
+					<span class="line line1"></span>
+					<span class="line line2"></span>
+					<span class="line line3"></span>
+					<span class="line line4"></span>
+				</div>
+			</label>
+			<nav class="hamburger9-menu" aria-labelledby="hamburger9-input">
+				<a href="/" class="menu-item">Home</a>
+				<a href="/about" class="menu-item">About</a>
+				<a href="/earthquakeinformation" class="menu-item">地震情報について</a>
+				<hr>
+				<a href="/terms" class="menu-item">利用規約</a>
+				<a href="/privacy" class="menu-item">プライバシーポリシー</a>
+			</nav>
+		</div>
+	</header>
 	<div style="display: contents">%sveltekit.body%</div>
+	<footer class="fixed bottom-0 left-0 w-full p-4">
+		<p class="text-center tracking-widest text-gray-700">
+			nekoch18 &copy; 2025 All Rights Reserved.
+		</p>
+	</footer>
 </body>
 
 </html>
