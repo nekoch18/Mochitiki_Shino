@@ -1,12 +1,33 @@
-<script>
+<script lang="ts">
 	import favicon from '$lib/assets/favicon.svg';
 	import '$lib/css/style.css';
+	import { page } from '$app/stores';
 
 	let { children } = $props();
+
+	let title = $derived(getTitle($page.url.pathname));
+
+	function getTitle(pathname: string) {
+		switch (pathname) {
+			case '/':
+				return 'Mochitiki Shino';
+			case '/about':
+				return 'About | Mochitiki Shino';
+			case '/earthquakeinformation':
+				return '地震情報について | Mochitiki Shino';
+			case '/terms':
+				return '利用規約 | Mochitiki Shino';
+			case '/privacy':
+				return 'プライバシーポリシー | Mochitiki Shino';
+			default:
+				return 'Mochitiki Shino';
+		}
+	}
 </script>
 
 <svelte:head>
 	<link rel="icon" href={favicon} />
+	<title>{title}</title>
 	<style>
     /* 背景のドットグリッド */
     body {
@@ -106,17 +127,6 @@
 		pointer-events: auto;
 	}
 
-	/* フッター固定 */
-	.footer-fixed {
-		position: fixed;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 1rem;
-		border-top: 1px solid #e5e7eb;
-		z-index: 1000;
-	}
-
 	/* full-bleed: 親が中央寄せでも表示をビューポート幅いっぱいにする */
 	.full-bleed {
 		width: 100vw;
@@ -132,9 +142,3 @@
 <main style="padding-bottom: 5rem;">
 	{@render children()}
 </main>
-
-<footer class="footer-fixed">
-	<p class="text-center tracking-widest text-gray-700">
-		nekoch18 &copy; 2025 All Rights Reserved.
-	</p>
-</footer>
